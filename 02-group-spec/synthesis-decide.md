@@ -40,13 +40,13 @@ trong khi vẫn kiểm soát rủi ro thông tin sai lệch (hallucination) bằ
 
 Chúng tôi đánh giá phạm vi lựa chọn phát triển cho ngày demo (Day 06) qua 5 câu hỏi cốt lõi:
 
-| Câu hỏi kiểm chứng                  | Trạng thái | Chi tiết đánh giá                                                                                                                                                 |
-| :------------------------------------| :----------:| :------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **User cụ thể chưa?**               | **Đạt**    | Khách hàng cá nhân sử dụng ứng dụng Techcombank Mobile cần tìm hiểu thông tin dịch vụ, lãi suất hoặc biểu phí.                                                    |
-| **Task đủ hẹp chưa?**               | **Đạt**    | Tập trung duy nhất vào luồng **Hỏi đáp thông tin (Q&A)** 
-| **AI decision rõ chưa?**            | **Đạt**    | AI phân loại ý định người dùng (FAQ Intent) và truy xuất câu trả lời chuẩn xác nhất từ cơ sở dữ liệu tri thức của ngân hàng.                                      |
-| **Failure path rõ chưa?**           | **Đạt**    | Khi người dùng hỏi các câu mơ hồ hoặc nằm ngoài cơ sở tri thức, AI nhận diện độ tin cậy thấp và kích hoạt thông điệp chuyển giao sang nhân viên hỗ trợ trực tiếp. |
-| **Có bằng chứng (Evidence) không?** | **Đạt**    | Đã thu thập bằng chứng từ phỏng vấn người dùng, phản hồi trên App Store và trải nghiệm thực tế của nhóm.                                                          |
+| Câu hỏi kiểm chứng | Trạng thái | Chi tiết đánh giá |
+| :--- | :---: | :--- |
+| **User cụ thể chưa?** | **Đạt** | Khách hàng cá nhân sử dụng ứng dụng Techcombank Mobile cần tìm hiểu thông tin dịch vụ, lãi suất hoặc biểu phí. |
+| **Task đủ hẹp chưa?** | **Đạt** | Tập trung duy nhất vào luồng **Hỏi đáp thông tin (Q&A)** thuộc 2 chủ đề lớn: **Lãi suất tiết kiệm hiện hành** và **Biểu phí dịch vụ thẻ/chuyển tiền**. |
+| **AI decision rõ chưa?** | **Đạt** | AI phân loại ý định người dùng (FAQ Intent) và truy xuất câu trả lời chuẩn xác nhất từ cơ sở dữ liệu tri thức của ngân hàng. |
+| **Failure path rõ chưa?** | **Đạt** | Khi người dùng hỏi các câu mơ hồ hoặc nằm ngoài cơ sở tri thức, AI nhận diện độ tin cậy thấp và kích hoạt thông điệp chuyển giao sang nhân viên hỗ trợ trực tiếp. |
+| **Có bằng chứng (Evidence) không?** | **Đạt** | Đã thu thập bằng chứng từ phỏng vấn người dùng, phản hồi trên App Store và trải nghiệm thực tế của nhóm. |
 
 ---
 

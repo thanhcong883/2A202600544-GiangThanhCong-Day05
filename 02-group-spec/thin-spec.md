@@ -17,8 +17,9 @@ Tài liệu đặc tả sản phẩm rút gọn cho tính năng Chatbot AI hỗ 
 
 | Bằng chứng thu thập | Nguồn gốc | Điểm đau của khách hàng nói lên điều gì? | Thay đổi trong tài liệu đặc tả (SPEC) |
 | :--- | :--- | :--- | :--- |
-| Khách hàng phải thoát ứng dụng ra Google tra cứu lãi suất tiết kiệm trực tuyến vì app không có tính năng tìm kiếm thông tin nhanh. | Khảo sát thực tế người dùng (Bạn Giang) | Đứt gãy trải nghiệm sử dụng, mất an toàn thông tin và tốn thời gian đăng nhập lại app. | Thiết lập khung chatbot hỏi đáp trực diện ngay tại màn hình chính/Sidebar của ứng dụng. |
-| Trang hỗ trợ (FAQ) hiện tại là trang web tĩnh dài dòng, không trả lời trực diện câu hỏi cụ thể của người dùng. | Trải nghiệm thực tế của nhóm | Người dùng nản lòng khi phải đọc tài liệu dài, họ muốn có câu trả lời tóm tắt ngắn gọn ngay lập tức. | Chatbot AI sẽ phân tích câu hỏi và trả về thông tin tóm tắt ngắn gọn dưới 3 dòng kèm nguồn trích dẫn. |
+| Khách hàng phải thoát ứng dụng ra Google tra cứu lãi suất tiết kiệm trực tuyến vì app không có tính năng tìm kiếm thông tin nhanh. | Chụp màn hình thực tế (Screenshot 1 — Trang chủ) & Khảo sát người dùng (Bạn Giang) | Đứt gãy trải nghiệm sử dụng, mất an toàn thông tin và tốn thời gian đăng nhập lại app. | Thiết lập khung chatbot hỏi đáp trực diện ngay tại màn hình chính/Sidebar của ứng dụng. |
+| Menu Sidebar hiện tại chỉ có các tùy chọn điều hướng tĩnh, thiếu hoàn toàn lối tắt hỏi đáp thông minh. | Chụp màn hình thực tế (Screenshot 2 — Sidebar Menu) & Trải nghiệm thực tế của nhóm | Người dùng không tìm được kênh Q&A nhanh; menu sidebar dàn trải nhiều lựa chọn nhưng không giải quyết được thắc mắc tức thời. | Tích hợp nút kích hoạt chatbot nổi bật ngay trên giao diện chính và trong sidebar menu. |
+| Trang "Help & Support" chỉ liên kết đến thông tin liên hệ tổng đài và cẩm nang tĩnh, không trả lời trực tiếp câu hỏi cụ thể của người dùng. | Chụp màn hình thực tế (Screenshot 3 — Help & Support) & Trải nghiệm thực tế của nhóm | Người dùng nản lòng khi phải đọc tài liệu dài, họ muốn có câu trả lời tóm tắt ngắn gọn ngay lập tức. | Chatbot AI sẽ phân tích câu hỏi và trả về thông tin tóm tắt ngắn gọn dưới 3 dòng kèm nguồn trích dẫn chính thức. |
 
 ---
 
@@ -134,8 +135,9 @@ Người chịu trách nhiệm thiết lập prompt và kiểm thử độ chín
 
 ## 9. Kế hoạch công việc sáng Day 06 (Owner Plan)
 
-| Thành viên                         | Vai trò & Công việc phụ trách                                                                                                                   | Bằng chứng sản phẩm cần có trong Repo                                                               |
-| :-----------------------------------| :------------------------------------------------------------------------------------------------------------------------------------------------| :----------------------------------------------------------------------------------------------------|
-| **Nguyễn Minh Hiếu**               | **Product Owner / Spec Lead**<br>Chịu trách nhiệm viết hoàn thiện SPEC, thiết kế các luồng Q&A và kịch bản giảm thiểu rủi ro ảo giác thông tin. | File `thin-spec.md` và `synthesis-decide.md` hoàn chỉnh trong repo.                                 |
-| **Giang Thanh Công (AI Engineer)** | **AI Developer**<br>Thiết lập Prompt-Engineering cho LLM, nạp dữ liệu tri thức biểu phí và lãi suất của Techcombank vào RAG context.            | Mã nguồn Prompt cấu hình RAG và tệp dữ liệu tri thức (`knowledge_base.json`) trong folder `src/ai`. |
-| **Phạm Văn Công (Frontend Dev)**   | **UI/UX Builder**<br>Thiết kế giao diện khung chat chatbot hỏi đáp thân thiện, làm nổi bật nguồn trích dẫn và các nút thoát hiểm.               | Giao diện giao tiếp chatbot chạy thử nghiệm (HTML/JS mock chat) trong folder `src/ui`.              |
+| Thành viên | Vai trò & Công việc phụ trách | Bằng chứng sản phẩm cần có trong Repo |
+| :--- | :--- | :--- |
+| **Giang Thanh Công** | **Product Owner / Spec Lead / Presenter**<br>Chịu trách nhiệm viết hoàn thiện tài liệu SPEC, thiết kế kịch bản giảm thiểu ảo giác thông tin và chuẩn bị nội dung pitch trình bày. | File [thin-spec.md](./thin-spec.md), [evidence-pack.md](./evidence-pack.md), và [synthesis-decide.md](./synthesis-decide.md) hoàn thiện trong repo. |
+| **Thành viên 2** | **AI Developer & QA Tester**<br>Thiết lập Prompt-Engineering, nạp dữ liệu tri thức FAQ về biểu phí và lãi suất của Techcombank, đồng thời kiểm thử độ chính xác Q&A. | Các script crawl dữ liệu [crawl_faq.py](../Techcombank-Chatbot-Prototype/crawl_faq.py) và cơ sở tri thức [faqs.json](../Techcombank-Chatbot-Prototype/faqs.json) trong repo. |
+| **Thành viên 3** | **UI/UX Builder & Frontend Dev**<br>Thiết kế giao diện khung chat chatbot hỏi đáp, tích hợp Sidebar Menu và Hỗ trợ & Trợ giúp (giao diện sáng). | Giao diện prototype hoàn chỉnh gồm [index.html](../Techcombank-Chatbot-Prototype/index.html), [style.css](../Techcombank-Chatbot-Prototype/style.css), và [app.js](../Techcombank-Chatbot-Prototype/app.js) chạy thực tế. |
+
